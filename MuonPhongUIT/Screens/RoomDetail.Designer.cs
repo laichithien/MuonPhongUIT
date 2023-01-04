@@ -104,6 +104,7 @@
             this.buttonMuon.TabIndex = 5;
             this.buttonMuon.Text = "Mượn phòng";
             this.buttonMuon.UseVisualStyleBackColor = false;
+            this.buttonMuon.Click += new System.EventHandler(this.buttonMuon_Click);
             // 
             // BasicInformation
             // 

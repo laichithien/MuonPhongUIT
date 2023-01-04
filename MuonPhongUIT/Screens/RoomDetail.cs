@@ -32,5 +32,10 @@ namespace MuonPhongUIT
         {
             pictureBoxAnh.Image = pictureBoxAnh3.Image;
         }
+
+        private void buttonMuon_Click(object sender, EventArgs e)
+        {
+            // truyền tên phòng cho form mượn phòng
+        }
     }
 }
