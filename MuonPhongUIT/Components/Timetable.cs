@@ -63,7 +63,7 @@ namespace MuonPhongUIT.Components
             for (int i=tietBD; i<=tietKT; i++)
             {
                 tenlabel = tenlabel + i.ToString();
-                Control[] control = this.Controls.Find("labelMo1", true);
+                Control[] control = this.Controls.Find(tenlabel, true);
                 if (control != null)
                 {
 
