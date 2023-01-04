@@ -93,10 +93,6 @@
     <Compile Include="Screens\MuonPhongScreen.Designer.cs">
       <DependentUpon>MuonPhongScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowRoomList.cs" />
-    <Compile Include="ShowRoomList.Designer.cs">
-      <DependentUpon>ShowRoomList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Variables\ListFormPanel.cs" />
     <EmbeddedResource Include="Components\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
@@ -121,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\MuonPhongScreen.resx">
       <DependentUpon>MuonPhongScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShowRoomList.resx">
-      <DependentUpon>ShowRoomList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
