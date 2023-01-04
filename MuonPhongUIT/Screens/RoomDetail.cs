@@ -16,5 +16,9 @@ namespace MuonPhongUIT
         {
             InitializeComponent();
         }
+        public RoomDetail(Room room)
+        {
+            
+        }
     }
 }

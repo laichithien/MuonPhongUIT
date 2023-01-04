@@ -65,26 +65,26 @@
     <Compile Include="Components\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data_Provider.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="DataManagement\Data_Provider.cs" />
+    <Compile Include="Screens\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Screens\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Screens\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Screens\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room.cs" />
-    <Compile Include="RoomDetail.cs">
+    <Compile Include="Components\Room.cs" />
+    <Compile Include="Screens\RoomDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RoomDetail.Designer.cs">
+    <Compile Include="Screens\RoomDetail.Designer.cs">
       <DependentUpon>RoomDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\MuonPhongScreen.cs">
@@ -93,9 +93,7 @@
     <Compile Include="Screens\MuonPhongScreen.Designer.cs">
       <DependentUpon>MuonPhongScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowRoomList.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ShowRoomList.cs" />
     <Compile Include="ShowRoomList.Designer.cs">
       <DependentUpon>ShowRoomList.cs</DependentUpon>
     </Compile>
@@ -103,10 +101,10 @@
     <EmbeddedResource Include="Components\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Screens\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Screens\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -118,7 +116,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RoomDetail.resx">
+    <EmbeddedResource Include="Screens\RoomDetail.resx">
       <DependentUpon>RoomDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\MuonPhongScreen.resx">

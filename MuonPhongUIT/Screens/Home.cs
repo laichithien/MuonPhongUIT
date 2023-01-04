@@ -25,19 +25,10 @@ namespace MuonPhongUIT
             containPanel.Controls.Clear();
 
 
-            MuonPhongScreen muonPhongScreen = new MuonPhongScreen();
-            openChildForm(muonPhongScreen);
-        }
-        private void loadChildForm()
-        {
-            switch (sidebarState)
-            {
-                case "Mượn phòng":
-
-                    MuonPhongScreen muonPhongScreen = new MuonPhongScreen();
-                    openChildForm(muonPhongScreen);
-                    break;
-            }
+            //MuonPhongScreen muonPhongScreen = new MuonPhongScreen();
+            //openChildForm(muonPhongScreen);
+            loadPanels();
+            loadSelectedSidebar();
         }
         private void openChildForm(Form childForm)
         {
@@ -52,12 +43,6 @@ namespace MuonPhongUIT
             Variables.ListFormPanel.ListFormsPanel[0].Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-
-
-        private void resetLabelColor()
-        {
-            
         }
 
         private void menuButton_Click(object sender, EventArgs e)
@@ -95,6 +80,52 @@ namespace MuonPhongUIT
             containPanel.Width = this.Width - sidebar.Width;
 
             sidebar.Height = this.Height - sidebar.Location.Y;
+        }
+        private void loadPanels()
+        {
+            sidebar.Width = 0;
+            containPanel.Width = this.Width - sidebar.Width;
+        }
+
+        private void sidebarMouseEnter(object sender, EventArgs e)
+        {
+            Label lb = (Label)sender;
+            lb.ForeColor = Color.Gold;
+        }
+        private void loadSelectedSidebar()
+        {
+            switch (sidebarState.Trim())
+            {
+                case "Mượn phòng":
+                    MuonPhongScreen muonPhongScreen = new MuonPhongScreen();
+                    openChildForm(muonPhongScreen);
+                    muonPhongOption.ForeColor = Color.Purple;
+                    break;
+                case "Xem lịch phòng":
+
+                    break;
+                case "Báo cáo hư hại":
+
+                    break;
+
+                default: break; 
+            }
+        }
+        private void sidebarMouseLeave(object sender, EventArgs e)
+        {
+            Label lb = (Label)(sender);
+            if (lb.Text.Trim() == sidebarState.Trim())
+            {
+                lb.ForeColor = Color.Purple;
+            }
+            else lb.ForeColor = Color.Black;
+        }
+
+        private void sidebarSelect(object sender, EventArgs e)
+        {
+            Label lb = (Label)(sender);
+            sidebarState = lb.Text;
+            loadSelectedSidebar();
         }
     }
 }

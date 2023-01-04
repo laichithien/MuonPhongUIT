@@ -10,7 +10,7 @@ namespace MuonPhongUIT
 {
     internal class Data_Provider
     {
-        private string StringConnection = "Data Source=ANDREWL\\SQLEXPRESS;Initial Catalog=QuanLyPhongHocUIT;Integrated Security=True";
+        private string StringConnection = "Data Source=Legion5Th;Initial Catalog=QuanLyPhongHocUIT;Integrated Security=True";
 
         // SELECT
         public DataTable ExecuteQuery(string query)

@@ -116,10 +116,10 @@
             // 
             this.containPanel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.containPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.containPanel.Location = new System.Drawing.Point(9, 94);
+            this.containPanel.Location = new System.Drawing.Point(184, 94);
             this.containPanel.Margin = new System.Windows.Forms.Padding(2);
             this.containPanel.Name = "containPanel";
-            this.containPanel.Size = new System.Drawing.Size(1032, 613);
+            this.containPanel.Size = new System.Drawing.Size(857, 613);
             this.containPanel.TabIndex = 8;
             // 
             // sidebar
@@ -133,7 +133,7 @@
             this.sidebar.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar.MaximumSize = new System.Drawing.Size(180, 10000);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(8, 613);
+            this.sidebar.Size = new System.Drawing.Size(180, 613);
             this.sidebar.TabIndex = 0;
             // 
             // baoCaoOption
@@ -143,12 +143,15 @@
             this.baoCaoOption.BackColor = System.Drawing.Color.LightSkyBlue;
             this.baoCaoOption.Cursor = System.Windows.Forms.Cursors.Hand;
             this.baoCaoOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baoCaoOption.Location = new System.Drawing.Point(-51, 98);
+            this.baoCaoOption.Location = new System.Drawing.Point(20, 96);
             this.baoCaoOption.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.baoCaoOption.Name = "baoCaoOption";
             this.baoCaoOption.Size = new System.Drawing.Size(129, 20);
             this.baoCaoOption.TabIndex = 0;
             this.baoCaoOption.Text = "Báo cáo hư hại";
+            this.baoCaoOption.Click += new System.EventHandler(this.sidebarSelect);
+            this.baoCaoOption.MouseEnter += new System.EventHandler(this.sidebarMouseEnter);
+            this.baoCaoOption.MouseLeave += new System.EventHandler(this.sidebarMouseLeave);
             // 
             // lichPhong
             // 
@@ -156,12 +159,15 @@
             this.lichPhong.AutoSize = true;
             this.lichPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lichPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lichPhong.Location = new System.Drawing.Point(-51, 63);
+            this.lichPhong.Location = new System.Drawing.Point(20, 61);
             this.lichPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lichPhong.Name = "lichPhong";
             this.lichPhong.Size = new System.Drawing.Size(132, 20);
             this.lichPhong.TabIndex = 0;
             this.lichPhong.Text = "Xem lịch phòng";
+            this.lichPhong.Click += new System.EventHandler(this.sidebarSelect);
+            this.lichPhong.MouseEnter += new System.EventHandler(this.sidebarMouseEnter);
+            this.lichPhong.MouseLeave += new System.EventHandler(this.sidebarMouseLeave);
             // 
             // muonPhongOption
             // 
@@ -169,12 +175,16 @@
             this.muonPhongOption.AutoSize = true;
             this.muonPhongOption.Cursor = System.Windows.Forms.Cursors.Hand;
             this.muonPhongOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.muonPhongOption.Location = new System.Drawing.Point(-51, 26);
+            this.muonPhongOption.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.muonPhongOption.Location = new System.Drawing.Point(20, 24);
             this.muonPhongOption.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.muonPhongOption.Name = "muonPhongOption";
             this.muonPhongOption.Size = new System.Drawing.Size(108, 20);
             this.muonPhongOption.TabIndex = 0;
             this.muonPhongOption.Text = "Mượn phòng";
+            this.muonPhongOption.Click += new System.EventHandler(this.sidebarSelect);
+            this.muonPhongOption.MouseEnter += new System.EventHandler(this.sidebarMouseEnter);
+            this.muonPhongOption.MouseLeave += new System.EventHandler(this.sidebarMouseLeave);
             // 
             // timer1
             // 
