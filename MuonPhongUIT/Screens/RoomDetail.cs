@@ -16,9 +16,21 @@ namespace MuonPhongUIT
         {
             InitializeComponent();
         }
-        public RoomDetail(Room room)
+  
+
+        private void pictureBoxAnh1_Click(object sender, EventArgs e)
         {
-            
+            pictureBoxAnh.Image = pictureBoxAnh1.Image;
+        }
+
+        private void pictureBoxAnh2_Click(object sender, EventArgs e)
+        {
+            pictureBoxAnh.Image = pictureBoxAnh2.Image;
+        }
+
+        private void pictureBoxAnh3_Click(object sender, EventArgs e)
+        {
+            pictureBoxAnh.Image = pictureBoxAnh3.Image;
         }
     }
 }
