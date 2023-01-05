@@ -107,6 +107,7 @@
             this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "Item";
             this.Size = new System.Drawing.Size(300, 95);
+            this.Load += new System.EventHandler(this.Item_Load);
             this.Click += new System.EventHandler(this.Item_Click);
             this.MouseEnter += new System.EventHandler(this.Item_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.Item_MouseLeave);

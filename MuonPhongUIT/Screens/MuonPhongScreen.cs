@@ -71,13 +71,43 @@ namespace MuonPhongUIT.Screens
         }
         private void activateFilterButton_Click(object sender, EventArgs e)
         {
+            if (fromPeriod.SelectedIndex > toPeriod.SelectedIndex)
+            {
+                MessageBox.Show("Tiết bắt đầu phải nhỏ hơn tiết kết thúc!!");
+                return;
+            }
             roomListContainer.Controls.Clear();
-            query = "select * from PHONG where SUCCHUA >= " + fromCapa.Text;
+            string date = dateTimeFilter.Value.ToString("yyyy-MM-dd");
+            int dayOfWeek = (int)dateTimeFilter.Value.DayOfWeek + 1;
+            int from = fromPeriod.SelectedIndex + 1;
+            int to = toPeriod.SelectedIndex + 1;
+            query = "select distinct TKB.TENPHONG, SUCCHUA, LOAIPHONG, TOA, BAOCAOHUHAI from TKB inner join PHONG on TKB.TENPHONG = PHONG.TENPHONG where TKB.NGAYBD <= '"+date+ "' and '"+date+"' < TKB.NGAYKT and TKB.TENPHONG not in (select TENPHONG from TKB where (THU = "+dayOfWeek+" and (TIETBD >= "+from+ " and TIETBD <= "+to+") or (TIETKT >= "+from+" and TIETKT <= "+to+")))";
+            string conditionCapa = " and SUCCHUA >= " + fromCapa.Text;
+            
+            string conditionAirConditioner = "";
+            if (isAirConditioner.Checked == true)
+            {
+                conditionAirConditioner = " and (LOAIPHONG in ('CLC', 'PM', 'E-Learning', N'Hội trường', N'PM học tiếng Nhật', 'TTNN') or TKB.TENPHONG like '%E%')";
+            }
+
+            string conditionProjector = "";
+            if (oneProjectorOption.Checked == true)
+            {
+                conditionProjector = " and SUCCHUA < 100";
+            }
+            else if (twoProjectorOption.Checked == true)
+            {
+                conditionProjector = " and SUCCHUA >= 100";
+            }
+
+            
             string condition0 = " and TOA like N'"+ state +"'";
-            string condition1 = " and <put the condition overhere>";
-            string condition2 = " and <put the condition overhere>";
+            if (state.Trim() == "Tất cả")
+            {
+                condition0 = "";
+            }
             //query += condition1 + condition2 + condition0;
-            query += condition0;
+            query += condition0 + conditionCapa + conditionAirConditioner + conditionProjector;
 
             loadRoomList();
         }
@@ -90,6 +120,7 @@ namespace MuonPhongUIT.Screens
             Label lb = (Label)sender;
             state = lb.Text;
             resetBarSelected();
+            if (state == "")
             query = "select * from PHONG where TOA like N'" + lb.Text + "'";
             reloadFilter();
             loadRoomList();
@@ -144,6 +175,29 @@ namespace MuonPhongUIT.Screens
             string query = "select * from PHONG where TOA like N'" + "'";
             reloadFilter();
             loadRoomList();
+        }
+
+        private void projectorClicked(object sender, EventArgs e)
+        {
+            RadioButton rd = (RadioButton)sender;
+            if (rd.Checked == true) { rd.Checked = false; }
+            else if (oneProjectorOption.Checked == false && twoProjectorOption.Checked == false)
+            {
+                rd.Checked = true;
+            }
+            else 
+            {
+                if (oneProjectorOption.Checked == false)
+                {
+                    oneProjectorOption.Checked = true;
+                    twoProjectorOption.Checked = false;
+                }
+                else if (twoProjectorOption.Checked == false)
+                {
+                    oneProjectorOption.Checked = false;
+                    twoProjectorOption.Checked = true;
+                }
+            }
         }
     }
 }

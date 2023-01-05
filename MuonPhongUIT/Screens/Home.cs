@@ -94,6 +94,9 @@ namespace MuonPhongUIT
         }
         private void loadSelectedSidebar()
         {
+            muonPhongOption.ForeColor = Color.Black;
+            lichPhong.ForeColor = Color.Black;
+            baoCaoOption.ForeColor = Color.Black;
             switch (sidebarState.Trim())
             {
                 case "Mượn phòng":
@@ -102,10 +105,12 @@ namespace MuonPhongUIT
                     muonPhongOption.ForeColor = Color.Purple;
                     break;
                 case "Xem lịch phòng":
-
+                    LichPhongScreen lichPhongScreen = new LichPhongScreen();
+                    openChildForm(lichPhongScreen);
+                    lichPhong.ForeColor= Color.Purple;
                     break;
                 case "Báo cáo hư hại":
-
+                    baoCaoOption.ForeColor= Color.Purple;
                     break;
 
                 default: break; 

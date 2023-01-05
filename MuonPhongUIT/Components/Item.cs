@@ -54,8 +54,13 @@ namespace MuonPhongUIT.Components
 
         private void Item_Click(object sender, EventArgs e)
         {
-            RoomDetail roomDetail = new RoomDetail();
+            RoomDetail roomDetail = new RoomDetail(room);
             openChildForm(roomDetail);
+        }
+
+        private void Item_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

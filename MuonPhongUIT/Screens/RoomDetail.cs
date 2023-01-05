@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MuonPhongUIT.Screens;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,17 @@ namespace MuonPhongUIT
 {
     public partial class RoomDetail : Form
     {
+        Room room;
         public RoomDetail()
         {
             InitializeComponent();
         }
   
-
+        public RoomDetail(Room room)
+        {
+            InitializeComponent();
+            this.room = room;   
+        }
         private void pictureBoxAnh1_Click(object sender, EventArgs e)
         {
             pictureBoxAnh.Image = pictureBoxAnh1.Image;
@@ -35,6 +41,8 @@ namespace MuonPhongUIT
 
         private void buttonMuon_Click(object sender, EventArgs e)
         {
+            DangKiMuonPhong dangKiMuonPhong = new DangKiMuonPhong(room);
+            dangKiMuonPhong.Show();
             // truyền tên phòng cho form mượn phòng
         }
     }
