@@ -112,7 +112,9 @@ namespace MuonPhongUIT
                 case "Báo cáo hư hại":
                     baoCaoOption.ForeColor= Color.Purple;
                     break;
-
+                case "Thống kê":
+                    thongKe.ForeColor = Color.Purple;
+                    break;
                 default: break; 
             }
         }

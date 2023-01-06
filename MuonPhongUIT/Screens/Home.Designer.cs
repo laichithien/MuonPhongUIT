@@ -41,6 +41,7 @@
             this.lichPhong = new System.Windows.Forms.Label();
             this.muonPhongOption = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.thongKe = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -56,18 +57,19 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1041, 94);
+            this.panel1.Size = new System.Drawing.Size(1388, 116);
             this.panel1.TabIndex = 4;
             // 
             // menuButton
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
-            this.menuButton.Location = new System.Drawing.Point(12, 25);
+            this.menuButton.Location = new System.Drawing.Point(16, 31);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(40, 34);
+            this.menuButton.Size = new System.Drawing.Size(53, 42);
             this.menuButton.TabIndex = 9;
             this.menuButton.UseVisualStyleBackColor = true;
             this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
@@ -77,11 +79,11 @@
             this.searchField.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.searchField.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchField.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchField.Location = new System.Drawing.Point(356, 24);
-            this.searchField.Margin = new System.Windows.Forms.Padding(2);
+            this.searchField.Location = new System.Drawing.Point(475, 30);
+            this.searchField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchField.Multiline = false;
             this.searchField.Name = "searchField";
-            this.searchField.Size = new System.Drawing.Size(511, 38);
+            this.searchField.Size = new System.Drawing.Size(680, 46);
             this.searchField.TabIndex = 5;
             this.searchField.Text = "";
             // 
@@ -91,10 +93,10 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(122, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(163, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -105,10 +107,10 @@
             this.searchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchButton.BackgroundImage")));
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchButton.Location = new System.Drawing.Point(874, 23);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
+            this.searchButton.Location = new System.Drawing.Point(1165, 28);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(36, 39);
+            this.searchButton.Size = new System.Drawing.Size(48, 48);
             this.searchButton.TabIndex = 4;
             this.searchButton.UseVisualStyleBackColor = false;
             // 
@@ -116,24 +118,25 @@
             // 
             this.containPanel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.containPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.containPanel.Location = new System.Drawing.Point(184, 94);
-            this.containPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.containPanel.Location = new System.Drawing.Point(245, 116);
+            this.containPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.containPanel.Name = "containPanel";
-            this.containPanel.Size = new System.Drawing.Size(857, 613);
+            this.containPanel.Size = new System.Drawing.Size(1143, 754);
             this.containPanel.TabIndex = 8;
             // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.sidebar.Controls.Add(this.thongKe);
             this.sidebar.Controls.Add(this.baoCaoOption);
             this.sidebar.Controls.Add(this.lichPhong);
             this.sidebar.Controls.Add(this.muonPhongOption);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebar.Location = new System.Drawing.Point(0, 94);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(2);
-            this.sidebar.MaximumSize = new System.Drawing.Size(180, 10000);
+            this.sidebar.Location = new System.Drawing.Point(0, 116);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sidebar.MaximumSize = new System.Drawing.Size(240, 12308);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(180, 613);
+            this.sidebar.Size = new System.Drawing.Size(240, 754);
             this.sidebar.TabIndex = 0;
             // 
             // baoCaoOption
@@ -143,10 +146,9 @@
             this.baoCaoOption.BackColor = System.Drawing.Color.LightSkyBlue;
             this.baoCaoOption.Cursor = System.Windows.Forms.Cursors.Hand;
             this.baoCaoOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baoCaoOption.Location = new System.Drawing.Point(20, 96);
-            this.baoCaoOption.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.baoCaoOption.Location = new System.Drawing.Point(27, 118);
             this.baoCaoOption.Name = "baoCaoOption";
-            this.baoCaoOption.Size = new System.Drawing.Size(129, 20);
+            this.baoCaoOption.Size = new System.Drawing.Size(156, 25);
             this.baoCaoOption.TabIndex = 0;
             this.baoCaoOption.Text = "Báo cáo hư hại";
             this.baoCaoOption.Click += new System.EventHandler(this.sidebarSelect);
@@ -159,10 +161,9 @@
             this.lichPhong.AutoSize = true;
             this.lichPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lichPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lichPhong.Location = new System.Drawing.Point(20, 61);
-            this.lichPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lichPhong.Location = new System.Drawing.Point(27, 75);
             this.lichPhong.Name = "lichPhong";
-            this.lichPhong.Size = new System.Drawing.Size(132, 20);
+            this.lichPhong.Size = new System.Drawing.Size(161, 25);
             this.lichPhong.TabIndex = 0;
             this.lichPhong.Text = "Xem lịch phòng";
             this.lichPhong.Click += new System.EventHandler(this.sidebarSelect);
@@ -176,10 +177,9 @@
             this.muonPhongOption.Cursor = System.Windows.Forms.Cursors.Hand;
             this.muonPhongOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.muonPhongOption.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.muonPhongOption.Location = new System.Drawing.Point(20, 24);
-            this.muonPhongOption.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.muonPhongOption.Location = new System.Drawing.Point(27, 30);
             this.muonPhongOption.Name = "muonPhongOption";
-            this.muonPhongOption.Size = new System.Drawing.Size(108, 20);
+            this.muonPhongOption.Size = new System.Drawing.Size(132, 25);
             this.muonPhongOption.TabIndex = 0;
             this.muonPhongOption.Text = "Mượn phòng";
             this.muonPhongOption.Click += new System.EventHandler(this.sidebarSelect);
@@ -191,16 +191,30 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // thongKe
+            // 
+            this.thongKe.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.thongKe.AutoSize = true;
+            this.thongKe.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.thongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.thongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thongKe.Location = new System.Drawing.Point(27, 163);
+            this.thongKe.Name = "thongKe";
+            this.thongKe.Size = new System.Drawing.Size(103, 25);
+            this.thongKe.TabIndex = 1;
+            this.thongKe.Text = "Thống kê";
+            this.thongKe.Click += new System.EventHandler(this.sidebarSelect);
+            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 707);
+            this.ClientSize = new System.Drawing.Size(1388, 870);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.containPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -225,5 +239,6 @@
         private System.Windows.Forms.Label muonPhongOption;
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label thongKe;
     }
 }

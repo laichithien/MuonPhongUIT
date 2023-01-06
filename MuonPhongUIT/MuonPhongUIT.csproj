@@ -59,6 +59,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Comment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Comment.Designer.cs">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     <Compile Include="Screens\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Lich1PhongScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Lich1PhongScreen.Designer.cs">
+      <DependentUpon>Lich1PhongScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\LichPhongScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,7 +136,16 @@
     <Compile Include="Screens\MuonPhongScreen.Designer.cs">
       <DependentUpon>MuonPhongScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ThongKeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ThongKeForm.Designer.cs">
+      <DependentUpon>ThongKeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Variables\ListFormPanel.cs" />
+    <EmbeddedResource Include="Components\Comment.resx">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Lich1PhongScreen.resx">
+      <DependentUpon>Lich1PhongScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\LichPhongScreen.resx">
       <DependentUpon>LichPhongScreen.cs</DependentUpon>
@@ -163,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\MuonPhongScreen.resx">
       <DependentUpon>MuonPhongScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ThongKeForm.resx">
+      <DependentUpon>ThongKeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

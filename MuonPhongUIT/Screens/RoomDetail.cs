@@ -45,5 +45,10 @@ namespace MuonPhongUIT
             dangKiMuonPhong.Show();
             // truyền tên phòng cho form mượn phòng
         }
+
+        private void buttonLich_Click(object sender, EventArgs e)
+        {
+            // show form chỉ có lịch mỗi phòng đó
+        }
     }
 }
