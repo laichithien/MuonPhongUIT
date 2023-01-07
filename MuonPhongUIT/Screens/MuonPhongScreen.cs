@@ -120,7 +120,6 @@ namespace MuonPhongUIT.Screens
             Label lb = (Label)sender;
             state = lb.Text;
             resetBarSelected();
-            if (state == "")
             query = "select * from PHONG where TOA like N'" + lb.Text + "'";
             reloadFilter();
             loadRoomList();

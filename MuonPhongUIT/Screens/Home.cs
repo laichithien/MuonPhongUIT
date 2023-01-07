@@ -97,6 +97,7 @@ namespace MuonPhongUIT
             muonPhongOption.ForeColor = Color.Black;
             lichPhong.ForeColor = Color.Black;
             baoCaoOption.ForeColor = Color.Black;
+            thongKe.ForeColor = Color.Black;
             switch (sidebarState.Trim())
             {
                 case "Mượn phòng":
@@ -110,6 +111,7 @@ namespace MuonPhongUIT
                     lichPhong.ForeColor= Color.Purple;
                     break;
                 case "Báo cáo hư hại":
+
                     baoCaoOption.ForeColor= Color.Purple;
                     break;
                 case "Thống kê":
