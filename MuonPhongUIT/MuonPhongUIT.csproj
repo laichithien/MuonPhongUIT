@@ -65,6 +65,18 @@
     <Compile Include="Components\Comment.Designer.cs">
       <DependentUpon>Comment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\CommentItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CommentItem.Designer.cs">
+      <DependentUpon>CommentItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\HuHaiItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\HuHaiItem.Designer.cs">
+      <DependentUpon>HuHaiItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     <Compile Include="Variables\ListFormPanel.cs" />
     <EmbeddedResource Include="Components\Comment.resx">
       <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CommentItem.resx">
+      <DependentUpon>CommentItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\HuHaiItem.resx">
+      <DependentUpon>HuHaiItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>

@@ -12,11 +12,48 @@ namespace MuonPhongUIT.Screens
 {
     public partial class ThongKeForm : Form
     {
+        string state = "Tất cả";
+        private Form activeFrom = null;
+        string query = "";
         public ThongKeForm()
         {
             InitializeComponent();
+            resetBarSelected();
+            
         }
+        private void resetBarSelected()
+        {
+            All.ForeColor = Color.White;
+            buildingAButton.ForeColor = Color.White;
+            buildingBButton.ForeColor = Color.White;
+            buildingCButton.ForeColor = Color.White;
+            buildingEButton.ForeColor = Color.White;
+            playField.ForeColor = Color.White;
 
+            switch (state)
+            {
+                case "Tất cả":
+                    All.ForeColor = Color.Gold;
+                    break;
+                case "Tòa A":
+                    buildingAButton.ForeColor = Color.Gold;
+                    break;
+                case "Tòa B":
+                    buildingBButton.ForeColor = Color.Gold;
+                    break;
+                case "Tòa C":
+                    buildingCButton.ForeColor = Color.Gold;
+                    break;
+                case "Tòa E":
+                    buildingEButton.ForeColor = Color.Gold;
+                    break;
+                case "Sân tập":
+                    playField.ForeColor = Color.Gold;
+                    break;
+                default:
+                    break;
+            }
+        }
         private void luotXem_Click(object sender, EventArgs e)
         {
             luotXem.ForeColor = Color.Red;
@@ -58,6 +95,27 @@ namespace MuonPhongUIT.Screens
             {
                 // sắp giảm dần theo lựa chọn lượt xem/ đánh giá/ hư hại
             }    
+        }
+
+        private void buildingOption_Click(object sender, EventArgs e)
+        {
+            //roomListContainer.Controls.Clear();
+
+
+            Label lb = (Label)sender;
+            state = lb.Text;
+            resetBarSelected();
+            query = "select * from PHONG where TOA like N'" + lb.Text + "'";
+            //reloadFilter();
+            //loadRoomList();
+        }
+
+        private void All_Click(object sender, EventArgs e)
+        {
+            Label lb = (Label)sender;
+            state = lb.Text;
+            resetBarSelected();
+            query = "select * from PHONG where TOA like N'" + "'";
         }
     }
 }

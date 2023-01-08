@@ -12,6 +12,7 @@ namespace MuonPhongUIT.Components
 {
     public partial class Item : UserControl
     {
+        Data_Provider dataProvider = new Data_Provider();
         Room room;
         private Form activeForm = null;
         public Item()
@@ -27,6 +28,29 @@ namespace MuonPhongUIT.Components
             capacity.Text = r.thisCapacity.ToString();
             building.Text = r.thisBuilding;
             roomType.Text = r.thisRoomType;
+            luotxem.Text = r.LUOTXEM.ToString();
+            loadStar();
+        }
+        private void loadStar()
+        {
+            string query = "select STARS from COMMENTS where TENPHONG like N'%" + room.thisRoomName + "%'";
+            DataTable dt = dataProvider.ExecuteQuery(query);
+            int sum = 0;
+            for (int i =0; i < dt.Rows.Count; i++)
+            {
+                sum += Convert.ToInt32(dt.Rows[i]["STARS"]);
+            }
+            int star = 0;
+            if (dt.Rows.Count != 0)
+            {
+
+                star = sum / dt.Rows.Count;
+            }
+            labelStar.Text = "";
+            for (int i = 0;i < star; i++)
+            {
+                labelStar.Text += "★";
+            }
         }
         private void openChildForm(Form childForm)
         {
@@ -44,23 +68,18 @@ namespace MuonPhongUIT.Components
         }
         private void Item_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(218, 228, 238);
+            this.BackColor = Color.CornflowerBlue;
         }
 
         private void Item_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            this.BackColor = Color.FromArgb(58, 108, 181);
         }
 
         private void Item_Click(object sender, EventArgs e)
         {
             RoomDetail roomDetail = new RoomDetail(room);
             openChildForm(roomDetail);
-        }
-
-        private void Item_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
