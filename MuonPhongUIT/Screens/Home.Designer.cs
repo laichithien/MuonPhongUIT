@@ -57,9 +57,9 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1041, 94);
+            this.panel1.Size = new System.Drawing.Size(1213, 94);
             this.panel1.TabIndex = 4;
             // 
             // menuButton
@@ -78,8 +78,8 @@
             this.searchField.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.searchField.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchField.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchField.Location = new System.Drawing.Point(356, 24);
-            this.searchField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchField.Location = new System.Drawing.Point(442, 24);
+            this.searchField.Margin = new System.Windows.Forms.Padding(2);
             this.searchField.Multiline = false;
             this.searchField.Name = "searchField";
             this.searchField.Size = new System.Drawing.Size(511, 38);
@@ -92,8 +92,8 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(122, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 81);
             this.pictureBox1.TabIndex = 8;
@@ -106,8 +106,8 @@
             this.searchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchButton.BackgroundImage")));
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchButton.Location = new System.Drawing.Point(874, 23);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchButton.Location = new System.Drawing.Point(960, 23);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(36, 39);
             this.searchButton.TabIndex = 4;
@@ -118,9 +118,9 @@
             this.containPanel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.containPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.containPanel.Location = new System.Drawing.Point(184, 94);
-            this.containPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.containPanel.Margin = new System.Windows.Forms.Padding(2);
             this.containPanel.Name = "containPanel";
-            this.containPanel.Size = new System.Drawing.Size(857, 613);
+            this.containPanel.Size = new System.Drawing.Size(1029, 691);
             this.containPanel.TabIndex = 8;
             // 
             // sidebar
@@ -132,10 +132,10 @@
             this.sidebar.Controls.Add(this.muonPhongOption);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 94);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar.MaximumSize = new System.Drawing.Size(200, 1000);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(180, 613);
+            this.sidebar.Size = new System.Drawing.Size(180, 691);
             this.sidebar.TabIndex = 0;
             // 
             // thongKe
@@ -212,12 +212,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 707);
+            this.ClientSize = new System.Drawing.Size(1213, 785);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.containPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

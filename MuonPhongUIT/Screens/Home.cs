@@ -111,10 +111,13 @@ namespace MuonPhongUIT
                     lichPhong.ForeColor= Color.Purple;
                     break;
                 case "Báo cáo hư hại":
-
+                    BaoCaoHuHai baoCaoHuHai = new BaoCaoHuHai();
+                    openChildForm(baoCaoHuHai);
                     baoCaoOption.ForeColor= Color.Purple;
                     break;
                 case "Thống kê":
+                    ThongKeForm thongKeForm = new ThongKeForm();
+                    openChildForm(thongKeForm);
                     thongKe.ForeColor = Color.Purple;
                     break;
                 default: break; 

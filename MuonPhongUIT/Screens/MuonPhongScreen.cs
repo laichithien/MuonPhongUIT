@@ -38,8 +38,9 @@ namespace MuonPhongUIT.Screens
                 int succhua = Convert.ToInt32(dt.Rows[i]["SUCCHUA"]);
                 string loaiphong = dt.Rows[i]["LOAIPHONG"].ToString();
                 string toa = dt.Rows[i]["TOA"].ToString();
-                string baocao = dt.Rows[i]["BAOCAOHUHAI"].ToString();
-                Room room = new Room(tenphong, succhua, toa, loaiphong);
+                double star = Convert.ToDouble(dt.Rows[i]["STARS"]);
+                int luotxem = Convert.ToInt32(dt.Rows[i]["LUOTXEM"]);
+                Room room = new Room(tenphong, succhua, loaiphong, toa, star, luotxem);
                 Item item = new Item(room);
                 roomListContainer.Controls.Add(item);
             }
