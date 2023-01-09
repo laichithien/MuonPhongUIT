@@ -1,6 +1,6 @@
 ﻿namespace MuonPhongUIT.Screens
 {
-    partial class ThongKeForm
+    partial class SuaCSVC
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.roomListContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.filterPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.danhGia = new System.Windows.Forms.Label();
-            this.huHong = new System.Windows.Forms.Label();
-            this.luotXem = new System.Windows.Forms.Label();
+            this.daGiaiQuyet = new System.Windows.Forms.Label();
+            this.tatCa = new System.Windows.Forms.Label();
+            this.chuaGiaiQuyet = new System.Windows.Forms.Label();
             this.optionPanel = new System.Windows.Forms.Panel();
             this.playField = new System.Windows.Forms.Label();
             this.buildingEButton = new System.Windows.Forms.Label();
@@ -41,18 +40,26 @@
             this.buildingBButton = new System.Windows.Forms.Label();
             this.All = new System.Windows.Forms.Label();
             this.buildingAButton = new System.Windows.Forms.Label();
-            this.roomListContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.filterPanel.SuspendLayout();
             this.optionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
+            // roomListContainer
+            // 
+            this.roomListContainer.AutoScroll = true;
+            this.roomListContainer.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.roomListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roomListContainer.Location = new System.Drawing.Point(0, 129);
+            this.roomListContainer.Margin = new System.Windows.Forms.Padding(4);
+            this.roomListContainer.Name = "roomListContainer";
+            this.roomListContainer.Size = new System.Drawing.Size(1485, 737);
+            this.roomListContainer.TabIndex = 17;
+            // 
             // filterPanel
             // 
-            this.filterPanel.Controls.Add(this.label4);
-            this.filterPanel.Controls.Add(this.comboBox1);
-            this.filterPanel.Controls.Add(this.danhGia);
-            this.filterPanel.Controls.Add(this.huHong);
-            this.filterPanel.Controls.Add(this.luotXem);
+            this.filterPanel.Controls.Add(this.daGiaiQuyet);
+            this.filterPanel.Controls.Add(this.tatCa);
+            this.filterPanel.Controls.Add(this.chuaGiaiQuyet);
             this.filterPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.filterPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.filterPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -60,73 +67,47 @@
             this.filterPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterPanel.Name = "filterPanel";
             this.filterPanel.Size = new System.Drawing.Size(1485, 69);
-            this.filterPanel.TabIndex = 13;
+            this.filterPanel.TabIndex = 16;
             // 
-            // label4
+            // daGiaiQuyet
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(905, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Sắp xếp:";
+            this.daGiaiQuyet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.daGiaiQuyet.AutoSize = true;
+            this.daGiaiQuyet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.daGiaiQuyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.daGiaiQuyet.Location = new System.Drawing.Point(717, 21);
+            this.daGiaiQuyet.Name = "daGiaiQuyet";
+            this.daGiaiQuyet.Size = new System.Drawing.Size(138, 25);
+            this.daGiaiQuyet.TabIndex = 2;
+            this.daGiaiQuyet.Text = "Đã giải quyết";
+            this.daGiaiQuyet.Click += new System.EventHandler(this.daGiaiQuyet_Click);
             // 
-            // comboBox1
+            // tatCa
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Giảm dần",
-            "Tăng dần"});
-            this.comboBox1.Location = new System.Drawing.Point(1015, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 33);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Giảm dần";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.tatCa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tatCa.AutoSize = true;
+            this.tatCa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tatCa.Location = new System.Drawing.Point(1001, 21);
+            this.tatCa.Name = "tatCa";
+            this.tatCa.Size = new System.Drawing.Size(73, 25);
+            this.tatCa.TabIndex = 1;
+            this.tatCa.Text = "Tất cả";
+            this.tatCa.Click += new System.EventHandler(this.tatCa_Click);
             // 
-            // danhGia
+            // chuaGiaiQuyet
             // 
-            this.danhGia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.danhGia.AutoSize = true;
-            this.danhGia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.danhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.danhGia.Location = new System.Drawing.Point(510, 21);
-            this.danhGia.Name = "danhGia";
-            this.danhGia.Size = new System.Drawing.Size(98, 25);
-            this.danhGia.TabIndex = 2;
-            this.danhGia.Text = "Đánh giá";
-            this.danhGia.Click += new System.EventHandler(this.danhGia_Click);
-            // 
-            // huHong
-            // 
-            this.huHong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.huHong.AutoSize = true;
-            this.huHong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.huHong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.huHong.Location = new System.Drawing.Point(712, 21);
-            this.huHong.Name = "huHong";
-            this.huHong.Size = new System.Drawing.Size(93, 25);
-            this.huHong.TabIndex = 1;
-            this.huHong.Text = "Hư hỏng";
-            this.huHong.Click += new System.EventHandler(this.huHong_Click);
-            // 
-            // luotXem
-            // 
-            this.luotXem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.luotXem.AutoSize = true;
-            this.luotXem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.luotXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.luotXem.ForeColor = System.Drawing.Color.Red;
-            this.luotXem.Location = new System.Drawing.Point(311, 18);
-            this.luotXem.Name = "luotXem";
-            this.luotXem.Size = new System.Drawing.Size(100, 25);
-            this.luotXem.TabIndex = 0;
-            this.luotXem.Text = "Lượt xem";
-            this.luotXem.Click += new System.EventHandler(this.luotXem_Click);
+            this.chuaGiaiQuyet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chuaGiaiQuyet.AutoSize = true;
+            this.chuaGiaiQuyet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chuaGiaiQuyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chuaGiaiQuyet.ForeColor = System.Drawing.Color.Red;
+            this.chuaGiaiQuyet.Location = new System.Drawing.Point(385, 21);
+            this.chuaGiaiQuyet.Name = "chuaGiaiQuyet";
+            this.chuaGiaiQuyet.Size = new System.Drawing.Size(163, 25);
+            this.chuaGiaiQuyet.TabIndex = 0;
+            this.chuaGiaiQuyet.Text = "Chưa giải quyết";
+            this.chuaGiaiQuyet.Click += new System.EventHandler(this.chuaGiaiQuyet_Click);
             // 
             // optionPanel
             // 
@@ -143,7 +124,7 @@
             this.optionPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionPanel.Name = "optionPanel";
             this.optionPanel.Size = new System.Drawing.Size(1485, 60);
-            this.optionPanel.TabIndex = 12;
+            this.optionPanel.TabIndex = 15;
             // 
             // playField
             // 
@@ -229,26 +210,15 @@
             this.buildingAButton.Text = "Tòa A";
             this.buildingAButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roomListContainer
-            // 
-            this.roomListContainer.AutoScroll = true;
-            this.roomListContainer.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.roomListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roomListContainer.Location = new System.Drawing.Point(0, 129);
-            this.roomListContainer.Margin = new System.Windows.Forms.Padding(4);
-            this.roomListContainer.Name = "roomListContainer";
-            this.roomListContainer.Size = new System.Drawing.Size(1485, 737);
-            this.roomListContainer.TabIndex = 14;
-            // 
-            // ThongKeForm
+            // SuaCSVC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1485, 866);
             this.Controls.Add(this.roomListContainer);
             this.Controls.Add(this.filterPanel);
             this.Controls.Add(this.optionPanel);
-            this.Name = "ThongKeForm";
-            this.Text = "ThongKeForm";
+            this.Name = "SuaCSVC";
+            this.Text = "SuaCSVC";
             this.filterPanel.ResumeLayout(false);
             this.filterPanel.PerformLayout();
             this.optionPanel.ResumeLayout(false);
@@ -258,11 +228,12 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel roomListContainer;
         private System.Windows.Forms.Panel filterPanel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label danhGia;
-        private System.Windows.Forms.Label huHong;
-        private System.Windows.Forms.Label luotXem;
+        private System.Windows.Forms.Label daGiaiQuyet;
+        private System.Windows.Forms.Label tatCa;
+        private System.Windows.Forms.Label chuaGiaiQuyet;
         private System.Windows.Forms.Panel optionPanel;
         private System.Windows.Forms.Label playField;
         private System.Windows.Forms.Label buildingEButton;
@@ -270,7 +241,5 @@
         private System.Windows.Forms.Label buildingBButton;
         private System.Windows.Forms.Label All;
         private System.Windows.Forms.Label buildingAButton;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel roomListContainer;
     }
 }
