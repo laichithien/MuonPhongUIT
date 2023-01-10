@@ -54,6 +54,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.pictureBoxImage);
             this.panel1.Location = new System.Drawing.Point(164, 3);
@@ -63,6 +66,8 @@
             // 
             // pictureBoxLeft
             // 
+            this.pictureBoxLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBoxLeft.BackgroundImage = global::MuonPhongUIT.Properties.Resources.left;
             this.pictureBoxLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxLeft.Location = new System.Drawing.Point(23, 235);
@@ -74,6 +79,8 @@
             // 
             // pictureBoxRight
             // 
+            this.pictureBoxRight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxRight.BackgroundImage = global::MuonPhongUIT.Properties.Resources.right;
             this.pictureBoxRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxRight.Location = new System.Drawing.Point(733, 235);

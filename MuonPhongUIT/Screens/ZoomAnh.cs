@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace MuonPhongUIT.Screens
 {
@@ -70,5 +72,6 @@ namespace MuonPhongUIT.Screens
                 h = pictureBoxImage.Image.Width;
             }    
         }
+    
     }
 }
