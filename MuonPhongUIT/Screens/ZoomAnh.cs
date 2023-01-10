@@ -17,8 +17,8 @@ namespace MuonPhongUIT.Screens
         public ZoomAnh(Image[] image)
         {
             InitializeComponent();
-            w = pictureBoxImage.Width;
-            h = pictureBoxImage.Height;
+            w = 520;
+            h = 600;
             img = image;
             Size newSize = new Size(w, h);
             Bitmap bmp = new Bitmap(img[0], newSize);
@@ -31,8 +31,8 @@ namespace MuonPhongUIT.Screens
                 i = 0;
             else
                 i++;
-            w = pictureBoxImage.Width;
-            h = pictureBoxImage.Height;
+            w = 520;
+            h = 600;
             Size newSize = new Size(w, h);
             Bitmap bmp = new Bitmap(img[i], newSize);
             pictureBoxImage.Image = bmp;
@@ -44,8 +44,8 @@ namespace MuonPhongUIT.Screens
                 i = 2;
             else
                 i--;
-            w = pictureBoxImage.Width;
-            h = pictureBoxImage.Height;
+            w = 520;
+            h = 600;
             Size newSize = new Size(w, h);
             Bitmap bmp = new Bitmap(img[i], newSize);
             pictureBoxImage.Image = bmp;
