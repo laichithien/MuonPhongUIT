@@ -85,12 +85,6 @@
       <DependentUpon>TimeTableHeader.cs</DependentUpon>
     </Compile>
     <Compile Include="DataManagement\Data_Provider.cs" />
-    <Compile Include="Screens\adHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\adHome.Designer.cs">
-      <DependentUpon>adHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\BaoCaoHuHai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +135,12 @@
     </Compile>
     <Compile Include="Screens\MuonPhongScreen.Designer.cs">
       <DependentUpon>MuonPhongScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SuaCSVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\SuaCSVC.Designer.cs">
+      <DependentUpon>SuaCSVC.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\ThemPhong.cs">
       <SubType>Form</SubType>
@@ -199,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\MuonPhongScreen.resx">
       <DependentUpon>MuonPhongScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SuaCSVC.resx">
+      <DependentUpon>SuaCSVC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\ThemPhong.resx">
       <DependentUpon>ThemPhong.cs</DependentUpon>

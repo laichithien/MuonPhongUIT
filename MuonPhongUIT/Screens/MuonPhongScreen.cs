@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MuonPhongUIT.Screens
 {
@@ -81,15 +82,22 @@ namespace MuonPhongUIT.Screens
             int dayOfWeek = (int)dateTimeFilter.Value.DayOfWeek + 1;
             int from = fromPeriod.SelectedIndex + 1;
             int to = toPeriod.SelectedIndex + 1;
-            query = "select distinct TKB.TENPHONG, SUCCHUA, LOAIPHONG, TOA, BAOCAOHUHAI from TKB inner join PHONG on TKB.TENPHONG = PHONG.TENPHONG where TKB.NGAYBD <= '"+date+ "' and '"+date+"' < TKB.NGAYKT and TKB.TENPHONG not in (select TENPHONG from TKB where (THU = "+dayOfWeek+" and (TIETBD >= "+from+ " and TIETBD <= "+to+") or (TIETKT >= "+from+" and TIETKT <= "+to+")))";
+            query = "select distinct TKB.TENPHONG, SUCCHUA, LOAIPHONG, TOA from TKB inner join PHONG on TKB.TENPHONG = PHONG.TENPHONG where TKB.NGAYBD <= '" + date + "' and '" + date + "' < TKB.NGAYKT and TKB.TENPHONG not in (select TENPHONG from TKB where (THU = " + dayOfWeek + " and (TIETBD >= " + from + " and TIETBD <= " + to + ") or (TIETKT >= " + from + " and TIETKT <= " + to + ")))";
+
+
+            query = "select distinct TKB.TENPHONG, SUCCHUA, LOAIPHONG, TOA  from TKB inner join PHONG on TKB.TENPHONG = PHONG.TENPHONG where TKB.NGAYBD <= '2022-10-09' and '2022-10-09' < TKB.NGAYKT and  TKB.TENPHONG  not in  (select TENPHONG from TKB where (THU = 2 and (TIETBD >= 5 and TIETBD <= 10) ))";
+
+            query = "select distinct TKB.TENPHONG, SUCCHUA, LOAIPHONG, TOA  from TKB inner join PHONG on TKB.TENPHONG = PHONG.TENPHONG where ";
+            query += " TKB.NGAYBD <= '" + date + "' and '" + date + "' < TKB.NGAYKT ";
             string conditionCapa = " and SUCCHUA >= " + fromCapa.Text;
-            
+            query += conditionCapa;
             string conditionAirConditioner = "";
             if (isAirConditioner.Checked == true)
             {
                 conditionAirConditioner = " and (LOAIPHONG in ('CLC', 'PM', 'E-Learning', N'Hội trường', N'PM học tiếng Nhật', 'TTNN') or TKB.TENPHONG like '%E%')";
+                
             }
-
+            query += conditionAirConditioner;
             string conditionProjector = "";
             if (oneProjectorOption.Checked == true)
             {
@@ -99,17 +107,23 @@ namespace MuonPhongUIT.Screens
             {
                 conditionProjector = " and SUCCHUA >= 100";
             }
+            query += conditionProjector;
 
-            
-            string condition0 = " and TOA like N'"+ state +"'";
+            string condition0 = " and TOA like N'" + state + "'";
             if (state.Trim() == "Tất cả")
             {
                 condition0 = "";
             }
+            query += condition0;
+             
+            query += " and  TKB.TENPHONG not in  (select TENPHONG from TKB where(THU = "+ dayOfWeek.ToString() + " and (TIETBD >= "+ fromPeriod.SelectedIndex.ToString() + " and TIETBD <= "+ toPeriod.SelectedIndex.ToString() + ")))";
+
             //query += condition1 + condition2 + condition0;
-            query += condition0 + conditionCapa + conditionAirConditioner + conditionProjector;
+
 
             loadRoomList();
+
+       
         }
 
         private void buildingOption_Click(object sender, EventArgs e)
