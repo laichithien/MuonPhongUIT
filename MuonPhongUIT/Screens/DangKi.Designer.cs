@@ -47,8 +47,8 @@
             this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -199,6 +199,15 @@
             // comboBoxKhoa
             // 
             this.comboBoxKhoa.FormattingEnabled = true;
+            this.comboBoxKhoa.Items.AddRange(new object[] {
+            "Khoa Khoa học Máy tính",
+            "Khoa Kỹ thuật Máy tính",
+            "Khoa Công nghệ Phần mềm",
+            "Khoa Hệ thống Thông tin",
+            "Khoa Mạng máy tính và Truyền thông",
+            "Khoa Khoa học và kỹ thuật Thông tin",
+            "Bộ môn Toán Lý",
+            "Phòng thí nghiệm Truyền thông Đa phương tiện"});
             this.comboBoxKhoa.Location = new System.Drawing.Point(181, 208);
             this.comboBoxKhoa.Name = "comboBoxKhoa";
             this.comboBoxKhoa.Size = new System.Drawing.Size(309, 24);
@@ -270,16 +279,6 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Hình ảnh";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MuonPhongUIT.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(196, 274);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(312, 287);
@@ -289,6 +288,16 @@
             this.button1.Text = "Chọn hình ảnh";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MuonPhongUIT.Properties.Resources.User;
+            this.pictureBox1.Location = new System.Drawing.Point(196, 274);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // DangKi
             // 
