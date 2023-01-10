@@ -91,6 +91,12 @@
     <Compile Include="Screens\BaoCaoHuHai.Designer.cs">
       <DependentUpon>BaoCaoHuHai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\DangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DangKi.Designer.cs">
+      <DependentUpon>DangKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\DangKiMuonPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,18 @@
     <Compile Include="Screens\ThongKeForm.Designer.cs">
       <DependentUpon>ThongKeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\UpdateUserInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UpdateUserInfor.Designer.cs">
+      <DependentUpon>UpdateUserInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Variables\ListFormPanel.cs" />
     <EmbeddedResource Include="Components\Comment.resx">
       <DependentUpon>Comment.cs</DependentUpon>
@@ -169,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\BaoCaoHuHai.resx">
       <DependentUpon>BaoCaoHuHai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DangKi.resx">
+      <DependentUpon>DangKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\DangKiMuonPhong.resx">
       <DependentUpon>DangKiMuonPhong.cs</DependentUpon>
@@ -193,6 +214,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Screens\RoomDetail.resx">
       <DependentUpon>RoomDetail.cs</DependentUpon>
@@ -209,6 +231,12 @@
     <EmbeddedResource Include="Screens\ThongKeForm.resx">
       <DependentUpon>ThongKeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UpdateUserInfor.resx">
+      <DependentUpon>UpdateUserInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -222,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
